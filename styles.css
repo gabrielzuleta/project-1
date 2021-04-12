@@ -1,0 +1,24 @@
+/* This are a few styles for the Git test */
+
+body {
+    color: #fff;
+    font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(130deg, rgba(0,0,0,1) 0%, rgba(108,11,181,1) 100%);
+    background: -webkit-linear-gradient(130deg, rgba(0,0,0,1) 0%, rgba(108,11,181,1) 100%);
+    background: linear-gradient(130deg, rgba(0,0,0,1) 0%, rgba(108,11,181,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#6c0bb5",GradientType=1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 15%;
+}
+
+h1 {
+    margin-top: 10%;
+}
+
+p {
+    margin: 3%;
+}

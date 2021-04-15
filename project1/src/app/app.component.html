@@ -1,6 +1,40 @@
 <input type="text" [(ngModel)]="title">
 {{title}}
 
-<div *ngIf="title === 'Gabriel'"> 
+
+<div *ngIf="title === 'buy'"> 
   This is a div
+</div>
+
+<div *ngIf="title === 'shop'"> 
+  This is the second div
+</div>
+
+<div *ngIf="title === 'get'"> 
+  This is the third div
+</div>
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'buy'">What are you looking for?</p>
+  <p *ngSwitchCase="'shop'">We can help you with that</p>
+  <p *ngSwitchCase="'get'">We think you can have it</p>
+  <p *ngSwitchDefault>There is no matching</p>
+</div>
+
+<button (click)="addItem()">Add items</button>
+
+<ul>
+  <li *ngIf="items.length === 0">The list is empty</li>
+  <li *ngFor="let name of items; index as i">
+    {{ name}} {{ i }}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul>
+
+<div class="product-grid">
+  <app-product 
+    *ngFor="let product of products" 
+    (productClicked)="clickProduct($event)"
+    [product]="product">
+  </app-product>
 </div>
